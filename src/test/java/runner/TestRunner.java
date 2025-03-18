@@ -11,7 +11,8 @@ import io.cucumber.testng.CucumberOptions;
 		glue = {"stepDefinitions.common","stepDefinitions.home", "stepDefinitions.search", "stepDefinitions.details", "stepDefinitions.cart","stepDefinitions.registration", "stepDefinitions.login"},
 //		glue = {"stepDefinitions.common","stepDefinitions.registration", "stepDefinitions.login"},
 //				glue = "stepDefinitions.registration",
-	    plugin = {"pretty", "html:target/cucumber-reports.html"}
+//	    plugin = {"pretty", "html:target/cucumber-reports.html"}
+				plugin = {"pretty", "json:target/cucumber-reports/Cucumber.json"}
 //	    tags = "@HomePageTest or @SearchTest"
 //	    tags = "@SearchTest"
 	)
