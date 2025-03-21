@@ -14,16 +14,18 @@ public class LoginSteps {
     LoginPage loginPage = new LoginPage(driver);
     
 	@Given("User is on the login page")
-	public void user_is_on_the_login_page() {
+	public void user_is_on_the_login_page() throws InterruptedException {
 		loginPage.openLoginPage();
 	}
 	@When("User logs in with {string} and {string}")
-	public void user_logs_in_with_and(String user, String pass) {
+	public void user_logs_in_with_and(String user, String pass) throws InterruptedException {
 		loginPage.login(user, pass);
 	}
 	@Then("User should be logged in successfully")
-	public void user_should_be_logged_in_successfully() {
+	public void user_should_be_logged_in_successfully() throws InterruptedException {
+		loginPage.displayWelcomeText();
 	    System.out.println("Successfully logged in!");
+	    
 	}
 
 		

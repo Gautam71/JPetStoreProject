@@ -29,7 +29,7 @@ public class SearchSteps {
 	    
 	}
 	@When("User search for {string}")
-	public void user_search_for(String animal) {
+	public void user_search_for(String animal) throws InterruptedException {
 	    searchPage.typeSearchBox(animal);
 	    searchPage.clickSearchButton();
 	}
@@ -43,8 +43,9 @@ public class SearchSteps {
 	  searchPage.selectFirstProductItem();
 	}
 	@Then("Displays the price of product")
-	public void displays_the_price_of_product() {
+	public void displays_the_price_of_product() throws InterruptedException {
 	    searchPage.printPriceOfProduct();
+	    
 	}
 
 	

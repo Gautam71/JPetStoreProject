@@ -19,15 +19,16 @@ public class RegistrationSteps {
 	}
 	@When("User enters registration details")
 	public void user_enters_registration_details() throws InterruptedException {
-		registrationPage.fillRegistrationForm("gautam7102", "Gautam@71", "Gautam", "Bhatyani", "gautam@gmail.com", "1234567890", "153-D", "Cannaught Place", "Meerut", "UP", "250003", "India");
+		registrationPage.fillRegistrationForm("imgautamb71", "Gautam@71", "Gautam", "Bhatyani", "gautam@gmail.com", "1234567890", "153-D", "Cannaught Place", "Meerut", "UP", "250003", "India");
 	}
 	@When("User submits the registration form")
-	public void user_submits_the_registration_form() {
+	public void user_submits_the_registration_form() throws InterruptedException {
 		registrationPage.submitRegistration();
 	}
 	@Then("User should be registered successfully")
-	public void user_should_be_registered_successfully() {
+	public void user_should_be_registered_successfully() throws InterruptedException {
 	    System.out.println("Registration Successful");
+	    
 	}
 
 	

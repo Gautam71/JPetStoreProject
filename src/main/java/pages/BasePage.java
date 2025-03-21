@@ -34,8 +34,8 @@ public class BasePage {
     }
     
 
-    public static void tearDown() {
-        
+    public static void tearDown() throws InterruptedException {
+        	Thread.sleep(2000);
             driver.quit();
         
     }

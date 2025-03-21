@@ -8,5 +8,5 @@ Feature: User Registration and Login
 
   Scenario: User Login
     Given User is on the login page
-    When User logs in with "gautam71" and "Gautam@123"
+    When User logs in with "gauty7" and "Gautam@71"
     Then User should be logged in successfully

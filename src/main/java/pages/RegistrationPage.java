@@ -69,7 +69,8 @@ public class RegistrationPage {
 	        
 	    }
 
-	    public void submitRegistration() {
+	    public void submitRegistration() throws InterruptedException {
 	        driver.findElement(registerButton).click();
+	        Thread.sleep(2000);
 	    }
 }

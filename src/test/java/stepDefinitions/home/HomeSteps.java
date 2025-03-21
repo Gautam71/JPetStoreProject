@@ -28,15 +28,17 @@ public class HomeSteps {
 	@Then("Verify HomePage title is {string}")
 	public void verify_home_page_title_is(String expectedTitle) {
 	   String actualTitle = homePage.getHomePageTitle();
+	   System.out.println(actualTitle);
 	   Assert.assertEquals(actualTitle , expectedTitle);
 	}
 
 
 	@Then("Verify HomePage link")
-	public void verify_home_page_link() {
+	public void verify_home_page_link() throws InterruptedException {
 	    String expectedURL = "https://petstore.octoperf.com/actions/Catalog.action";
 	    String actualURL = homePage.getURL();
 	    Assert.assertEquals(expectedURL , actualURL);
+	   
 	}
 
 }

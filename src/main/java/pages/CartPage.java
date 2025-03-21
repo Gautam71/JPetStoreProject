@@ -18,9 +18,9 @@ public class CartPage {
 	private By checkoutButton = By.xpath("//a[contains(text(),'Proceed to Checkout')]");
 	private By cartItemsLocator = By.xpath("//table[@id='Cart']//td[1]");
 	private By quantityField = By.xpath("//*[@id=\'Cart\']/form/table/tbody/tr[4]/td[5]/input");
-//	//*[@id="Cart"]/form/table/tbody/tr[2]/td[5]/input //*[@id="Cart"]/form/table/tbody/tr[3]/td[5]/input
+
     private By updateButton = By.xpath("//*[@id=\'Cart\']/form/table/tbody/tr[5]/td[1]/input");
-//    //*[@id="Cart"]/form/table/tbody/tr[5]/td[1]/input
+
     private By removeButton = By.xpath("//*[@id=\'Cart\']/form/table/tbody/tr[2]/td[8]/a");
     private By signin = By.xpath("//*[@id=\'MenuContent\']/a[2]");
     private By username = By.name("username");
@@ -32,7 +32,7 @@ public class CartPage {
     private By addtocart = By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[2]/td[5]/a");
     private By removeLink = By.xpath("//a[@href='/actions/Cart.action?removeItemFromCart=&workingItemId=']");
 
-//    private By cartIcon = By.xpath("//*[@id=\"MenuContent\"]/a[1]/img");
+
 
 	
 	
@@ -90,12 +90,14 @@ public class CartPage {
 	public boolean isQuantityUpdated() {
 		return driver.findElement(quantityField).getAttribute("value").equals("2");
 	}
-	public void proceedToCheckout() {
+	public void proceedToCheckout() throws InterruptedException {
+		Thread.sleep(2000);
         driver.findElement(checkoutButton).click();
     }
 
-    // Method to verify checkout page is displayed
-    public boolean isCheckoutPageDisplayed() {
+    
+    public boolean isCheckoutPageDisplayed() throws InterruptedException {
+    	Thread.sleep(2000);
         return driver.getCurrentUrl().contains("Order.action");
     }
     

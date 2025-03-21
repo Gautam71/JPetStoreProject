@@ -10,13 +10,15 @@ public class ProductDetailsPage {
 		this.driver = driver;
 	}
 	
-	By productImage = (By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[1]/td/img"));
-	By productTitle = (By.xpath("//*[@id='Catalog']/table/tbody/tr[3]/td"));
-	By productDescription = (By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[1]"));
-	By productPrice = (By.xpath("//*[@id='Catalog']/table/tbody/tr[6]"));
-	By productAvailability = (By.xpath("//*[@id='Catalog']/table/tbody/tr[5]"));
-	By addToCartButton = By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[7]/td/a");
-	By itemButton = By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[2]/td[1]/a");
+	private By productImage = (By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[1]/td/img"));
+	private By productTitle = (By.xpath("//*[@id='Catalog']/table/tbody/tr[3]/td"));
+	private By productDescription = (By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[1]"));
+	private By productPrice = (By.xpath("//*[@id='Catalog']/table/tbody/tr[6]"));
+	private By productAvailability = (By.xpath("//*[@id='Catalog']/table/tbody/tr[5]"));
+	private By addToCartButton = By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[7]/td/a");
+//	private By itemButton = By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[2]/td[1]/a");
+	//*[@id="Catalog"]/table/tbody/tr[3]/td[1]/a
+	private By itemButton = By.xpath("//*[@id=\'Catalog\']/table/tbody/tr[3]/td[1]/a");
 	
 	public String getProductTitle() {
         return driver.findElement(productTitle).getText();

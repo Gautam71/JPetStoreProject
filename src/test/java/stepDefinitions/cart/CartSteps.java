@@ -22,8 +22,8 @@ public class CartSteps {
 	CartPage cartPage;
 	
 	public CartSteps() {
-		this.driver = BasePage.getDriver(); // Ensure driver is initialized
-        this.cartPage = new CartPage(driver); // Initialize CartPage
+		this.driver = BasePage.getDriver(); 
+        this.cartPage = new CartPage(driver); 
 	}
 	SoftAssert softAssert = new SoftAssert();
 
@@ -76,10 +76,7 @@ public class CartSteps {
 	public void user_is_on_the_cart_page() throws InterruptedException {
 		cartPage.takeToCartPage();
 	}
-//	@When("user removes a product {string} from the cart ")
-//	public void user_removes_a_product_from_the_cart(String productId) throws InterruptedException {
-//		
-//	}
+
 	
 	@When("user removes a product {string} from the cart")
 	public void user_removes_a_product_from_the_cart(String productId) throws InterruptedException {
@@ -97,15 +94,16 @@ public class CartSteps {
 
 	@Given("user has items in the cart")
 	public void user_has_items_in_the_cart() {
-		
+		System.out.println("we are on the cart Page");
 	}
 	@When("user proceeds to checkout")
-	public void user_proceeds_to_checkout() {
+	public void user_proceeds_to_checkout() throws InterruptedException {
 		cartPage.proceedToCheckout();
 	}
 	@Then("checkout page should be displayed")
-	public void checkout_page_should_be_displayed() {
+	public void checkout_page_should_be_displayed() throws InterruptedException {
 		Assert.assertTrue(cartPage.isCheckoutPageDisplayed(), "Checkout page not displayed!");
+		
 	}
 
 }

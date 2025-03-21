@@ -1,0 +1,9 @@
+<extentreports>
+    <configuration>
+        <theme>dark</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>https</protocol>
+        <documentTitle>JePetStore Automation Report</documentTitle>
+        <reportName>PetStore Test Execution Report</reportName>
+    </configuration>
+</extentreports>
